@@ -48,8 +48,11 @@ header img {
   height: 1.75rem;
 }
 
-.hero-img img {
-  width: 100%;
+.hero {
+  width: 375px;
+  height: 200px;
+  background-image: url(images/hero-mobile.jpg);
+
 }
 
 .coming-soon {
@@ -140,8 +143,6 @@ footer {
   font-size: 11px;
   text-align: center;
   color: var(--SoftRed);
-  position: fixed;
-  bottom: 0;
 }
 
 @media (min-width: 1000px) {
@@ -153,28 +154,41 @@ footer {
   }
   main {
     max-width: none;
-    height: fit-content;
+    height: 100vh;
     display: grid;
-    grid-template:
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 2fr .5fr;
+    grid-template-areas:
       "header hero"
-      "coming-soon hero"
-      "footer hero" auto / 2fr 1fr;
+      "soon hero"
+      "footer hero";
   }
 
   header,
   .coming-soon {
-    height: auto;
-    padding: 2rem 10rem;
-    margin: 0;
+    padding: 2rem 20rem;
+  }
+
+  header {
+    grid-area: header;
+    align-self: center;
+
   }
 
   header img {
     height: 2.5rem;
+    align-items: center;
   }
 
+
+
   .hero {
-    grid-column: 2/3;
-    grid-row: 1/4;
+    height: 100%;
+    width: 100%;
+    grid-area: hero;
+    background-image: url(images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .hero-img {
@@ -182,17 +196,18 @@ footer {
   }
 
   .coming-soon {
-    grid-row: 2/3;
+    grid-area: soon;
     text-align: left;
   }
 
   footer {
     position: static;
-    grid-column: 1/2;
-    grid-row: 3/4;
+    grid-area: footer;
+    align-self: end;
   }
 
-  h1, span {
+  h1,
+  span {
     font-size: var(--desktop-header);
     letter-spacing: 1rem;
   }
@@ -200,6 +215,4 @@ footer {
   .hero p {
     font-size: var(--desktop-body);
   }
-
-
 }
