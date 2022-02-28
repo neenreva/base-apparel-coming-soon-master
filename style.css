@@ -149,14 +149,13 @@ footer {
   body {
     background-image: url(images/bg-pattern-desktop.svg);
     background-repeat: none;
-    background-position: center;
     background-size: cover;
   }
   main {
     max-width: none;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr .5fr;
     grid-template-areas:
       "header hero"

@@ -1,6 +1,5 @@
 const inputVal = document.querySelector(".email-input");
 const emailError = document.querySelector(".error");
-const heroImg = document.querySelector(".hero-img");
 
 document.querySelector("button").addEventListener("click", (e) => {
   e.preventDefault();
