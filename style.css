@@ -7,7 +7,7 @@
   --mobile-body: 1rem;
   --mobile-header: 2.75rem;
   --desktop-body: 1.5rem;
-  --desktop-header: 4.75rem;
+  --desktop-header: 4.5rem;
 }
 
 * {
@@ -77,6 +77,11 @@ input {
   border: var(--DesaturatedRed) solid 1px;
   color: var(--DesaturatedRed);
   padding-left: 1.5rem;
+  background: none;
+}
+
+input::placeholder {
+  color: var(--DesaturatedRed)
 }
 
 input:focus {
@@ -155,7 +160,7 @@ footer {
     max-width: none;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 610px;
     grid-template-rows: 1fr 2fr .5fr;
     grid-template-areas:
       "header hero"
@@ -165,7 +170,7 @@ footer {
 
   header,
   .coming-soon {
-    padding: 2rem 20rem;
+    padding: 2rem 20vw;
   }
 
   header {
@@ -188,10 +193,6 @@ footer {
     background-image: url(images/hero-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  .hero-img {
-    object-fit: cover;
   }
 
   .coming-soon {
