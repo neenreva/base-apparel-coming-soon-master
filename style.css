@@ -150,7 +150,7 @@ footer {
   color: var(--SoftRed);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
   body {
     background-image: url(images/bg-pattern-desktop.svg);
     background-repeat: none;
@@ -170,7 +170,7 @@ footer {
 
   header,
   .coming-soon {
-    padding: 2rem 20vw;
+    padding: 2rem 20%;
   }
 
   header {
