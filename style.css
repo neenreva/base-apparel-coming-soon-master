@@ -52,7 +52,6 @@ header img {
   width: 375px;
   height: 200px;
   background-image: url(images/hero-mobile.jpg);
-
 }
 
 .coming-soon {
@@ -81,7 +80,7 @@ input {
 }
 
 input::placeholder {
-  color: var(--DesaturatedRed)
+  color: var(--DesaturatedRed);
 }
 
 input:focus {
@@ -161,7 +160,7 @@ footer {
     height: 100vh;
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: 1fr 2fr .5fr;
+    grid-template-rows: 1fr 2fr 0.5fr;
     grid-template-areas:
       "header hero"
       "soon hero"
@@ -176,15 +175,12 @@ footer {
   header {
     grid-area: header;
     align-self: center;
-
   }
 
   header img {
     height: 2.5rem;
     align-items: center;
   }
-
-
 
   .hero {
     height: 100%;
